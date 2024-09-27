@@ -1,0 +1,106 @@
+# Assignment
+
+
+<font color = 'red' size = 3>Problem Statement 1 :Write a Python program to multiply a M * N matrix by N * A matrix and create a real matrix product</font>
+
+import numpy as np
+
+# creating M *N Matrix(5*3)
+
+arr1 = np.random.random((5,3))
+print("M*N (5*3) Matrix = ")
+print(arr1)
+print()
+
+# Creating N*A Matrix(3*2)
+
+arr2 = np.random.random((3,2))
+print("N*A (3*2) Matrix = ")
+print(arr2)
+print()
+
+# Multiplying two matrix
+
+Dot_Matrix = np.dot(arr1,arr2)
+print("The Real matrix product(Dot_Matrix) = ")
+print(Dot_Matrix)
+
+
+
+<font color= 'red' size = 3>Problem Statement 2 :Write a NumPy program to check if each element of an array of your choice is composed of digits, 
+lower case letters, and upper case letters only.</font>
+
+array = np.array(["C++","java","NET","Maths", 9 ,"LOGIC", 89])
+print("array = ",array)
+print()
+
+x = np.char.isdigit(array)
+y = np.char.islower(array)
+z = np.char.isupper(array)
+
+print("Digits only = ", x)
+print()
+print("lowercase only = ", y)
+print()
+print("Uppercase only = ", z)
+
+
+
+<font color='red' size = 3>Problem Statement 3 :Write a program thatreads two space-separated positive integers X and Y as input and perform the
+following tasks </font>
+
+print("Enter the Two positive number X Y : ")
+X,Y= input().split()
+print("X : ",int(X))
+print("Y : ",int(Y))
+
+<font color='blue' size=3>Create a list (lst1) starting at one (1) with 16 elements at a step of X</font>
+
+lst1 = np.arange(1,32,2)
+print("lst1 : ",lst1)
+
+<font color='blue' size=3>Create a list (lst2) starting at one (1) with 16 elements at a step of Y</font>
+
+lst2 = np.arange(1,48,3)
+print("lst2 : ",lst2)
+
+<font color='blue' size=3>Create two NumPy arrays np1 and np2 using lst1 and lst2 respectively</font>
+
+np1 = np.array(lst1)
+np2 = np.array(lst2)
+print("np1 : ",np1 ,"np2 :", np2)
+
+<font color='blue' size =3>Reshape both the NumPy arrays to (4,4)</font>
+
+print("np1 : ")
+print(np1.reshape(4,4))
+print()
+print("np2 : ")
+print(np2.reshape(4,4))
+
+<font color='blue' size =3>Create a new np array (np3) with values obtained by subtracting both the arrays (np1 -np2)</font>
+
+# np3 = np.subtract(np1,np2)
+np3 = np1 - np2
+print("np3 : ")
+print(np3)
+
+<font color='blue' size=3>Print all the elements of np3 in a single dimension list like the format </font>
+
+print(np3)
+
+<font color='red' size = 3>problem statement 4 :
+    Write a Python program thattakes two integer-NumPy arrays, P and Q of shape [3∗3]and performthe following task</font>
+
+P = np.array([[23,6,12],[34,32,13],[8,16,26]])
+Q = np.array([[12,3,10],[21,5,11],[14,9,22]])
+print("P : ")
+print(P)
+print("Q : ")
+print(Q)
+
+<font color='blue' size=3>Print the element-wise difference of the matrix P and Q(P−Q)</font>
+
+Difference = np.subtract(P,Q)
+print("Difference")
+print(Difference)
